@@ -1,6 +1,9 @@
 <template>
     <div>
-        {{nome}}
+        <label for="forNome">Nome do Usuário:</label> <br>
+        <input type="text" v-model="formNome"> <br> <br>
+
+        <button @click="eventoPai">Clique Aqui</button>
     </div>
 </template>
 
@@ -10,8 +13,16 @@
         name: "ComponenteTeste",
         data(){
             return{
-                nome: "Paulo Cesar"
+                nome: "Paulo Cesar",
+                formNome: ""
             }
+        },
+        methods:{
+
+            eventoPai(){
+                this.$emit("update-message", this.formNome)
+            }
+
         }
     }
 

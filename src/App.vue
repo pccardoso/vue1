@@ -2,7 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <p>Olá meu projeto versionado GitHub</p>
 
-  <ComponenteTeste/>
+  <ComponenteTeste @update-message="emitirAlert"/>
 
 </template>
 
@@ -14,6 +14,11 @@
     name: 'App',
     components: {
       ComponenteTeste
+    },
+    methods:{
+      emitirAlert(msg){
+        alert(msg)
+      }
     }
   }
 </script>
