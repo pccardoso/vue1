@@ -1,19 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
   <p>Olá meu projeto versionado GitHub</p>
-
-  <ComponenteTeste @update-message="emitirAlert"/>
-
 </template>
 
 <script>
 
-  import ComponenteTeste from "./components/ComponenteTeste.vue"
-
   export default {
     name: 'App',
     components: {
-      ComponenteTeste
+    
     },
     methods:{
       emitirAlert(msg){
