@@ -1,15 +1,21 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <p>Olá meu projeto versionado GitHub</p>
+
+  <ComponenteTeste/>
+
 </template>
 
 <script>
 
-export default {
-  name: 'App',
-  components: {
+  import ComponenteTeste from "./components/ComponenteTeste.vue"
+
+  export default {
+    name: 'App',
+    components: {
+      ComponenteTeste
+    }
   }
-}
 </script>
 
 <style>
